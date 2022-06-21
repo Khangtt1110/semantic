@@ -21,3 +21,5 @@ export const HeaderData = [
         active: true,
     },
 ];
+
+export const ListHeader = ['Men', 'Women', 'Kids', 'New Arrivals', 'Skate', 'Latest', '#Houseofvans'];

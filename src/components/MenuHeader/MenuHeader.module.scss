@@ -1,13 +1,18 @@
 .wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+
 }
 
 .logo {
-    width: 13rem;
-    height: 5rem;
-    background: url('../../asserts//VansLogoHeader.png') center;
+    height: 64px !important;
 }
 
 .search {
+    width: 15% !important;
+
+    &>div {
+        margin-left: 30px !important;
+    }
 }
 
 .card {

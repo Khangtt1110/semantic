@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 :root {
     --primary: #fe2c55;
     --black: #000;
@@ -31,11 +32,18 @@ body {
     color: var(--text-color);
     overflow-x: overlay;
     text-transform: uppercase;
+
     h1 {
         font-family: var(--font-family);
     }
+
     button {
         font-family: var(--font-family) !important;
+        cursor: pointer;
+    }
+
+    p {
+        margin: 0;
     }
 }
 
