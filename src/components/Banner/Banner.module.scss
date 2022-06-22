@@ -1,12 +1,14 @@
-.wrapper {
-}
 .content {
     display: flex !important;
+    height: 450px;
 }
 
 .first-banner {
     width: 870px !important;
-    height: 700px;
+}
+
+.second-banner {
+    width: 580px !important;
 }
 
 .number {
@@ -20,10 +22,28 @@
 .description {
     margin: 100px 0 0 50px !important;
     line-height: 3.3rem;
-    font-size: 3rem;
+    font-size: 2rem;
     width: 25%;
+    font-weight: 600;
 }
 
 .second-banner {
     width: 580px !important;
+}
+
+.elements {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    img {
+        width: 250px;
+    }
+}
+
+.price {
+    color: red !important;
+    margin: 14px 0 100px;
+    font-weight: 600;
 }

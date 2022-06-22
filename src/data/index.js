@@ -93,3 +93,34 @@ export const ProductsData = [
         price: '55.99',
     },
 ];
+
+export const bannerData = [
+    {
+        number: '01',
+        title: (
+            <p>
+                This <br /> Season's <br /> Must-haves
+            </p>
+        ),
+        button: 'show now',
+        image: images.clothes,
+        content: (
+            <p>
+                Vans dipped palm <br /> island youth t-shirt
+            </p>
+        ),
+        price: 19.99,
+        active: true,
+    },
+    {
+        number: '02',
+        title: (
+            <p>
+                New <br /> Arrivals <br /> Pro Skate
+            </p>
+        ),
+        button: 'Discover More',
+        image: images.banner,
+        active: false,
+    },
+];
