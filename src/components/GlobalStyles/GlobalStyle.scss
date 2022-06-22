@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
 :root {
-    --primary: #fe2c55;
+    --primary: #d61920;
     --black: #000;
     --white: #fff;
 
@@ -31,14 +31,17 @@ body {
     text-rendering: optimizeSpeed;
     color: var(--text-color);
     overflow-x: overlay;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 
-    h1 {
-        font-family: var(--font-family);
+    h1,
+    h2,
+    h5,
+    button {
+        font-family: var(--font-family) !important;
+        text-transform: uppercase !important;
     }
 
     button {
-        font-family: var(--font-family) !important;
         cursor: pointer;
     }
 
@@ -58,4 +61,14 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
+}
+
+i.bordered.icon {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui.button {
+    border-radius: 0 !important;
+    font-weight: 200 !important;
 }

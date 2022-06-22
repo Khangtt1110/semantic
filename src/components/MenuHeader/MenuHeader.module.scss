@@ -1,16 +1,16 @@
 .wrapper {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
-
 }
 
 .logo {
     height: 64px !important;
+    margin-right: -32px !important;
 }
 
 .search {
-    width: 15% !important;
+    width: 25% !important;
 
-    &>div {
+    & > div {
         margin-left: 30px !important;
     }
 }
