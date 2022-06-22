@@ -1,0 +1,29 @@
+.wrapper {
+}
+.content {
+    display: flex !important;
+}
+
+.first-banner {
+    width: 870px !important;
+    height: 700px;
+}
+
+.number {
+    font-size: 6rem !important;
+    opacity: 0.1;
+    position: absolute;
+    top: 1em;
+    left: 0.3em;
+}
+
+.description {
+    margin: 100px 0 0 50px !important;
+    line-height: 3.3rem;
+    font-size: 3rem;
+    width: 25%;
+}
+
+.second-banner {
+    width: 580px !important;
+}

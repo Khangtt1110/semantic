@@ -1,0 +1,38 @@
+.wrapper {
+    .image {
+        padding: 0 40px !important;
+    }
+
+    &:hover {
+        .card {
+            visibility: inherit;
+        }
+    }
+}
+
+.wrapper:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.card {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px !important;
+    visibility: hidden;
+
+    .card-btn {
+        border-radius: 3px !important;
+        padding: 11px 5px !important;
+
+        i {
+            margin: 0 !important;
+        }
+    }
+}
+
+.price {
+    color: red !important;
+    margin: 14px 0 100px;
+    font-weight: 600;
+}

@@ -1,3 +1,5 @@
+import images from '../asserts';
+
 export const HeaderData = [
     {
         name: 'Rest of Europe',
@@ -33,3 +35,61 @@ export const IntroduceData = {
         </p>
     ),
 };
+
+export const FeaturedProductData = {
+    name: 'Featured Products',
+    gender: ['Men', 'Women', 'Unisex'],
+};
+
+export const ProductsData = [
+    {
+        id: 1,
+        image: images.card1,
+        title: (
+            <p>
+                Mono Old <br /> Skool Shoes
+            </p>
+        ),
+        price: '55.99',
+    },
+    {
+        id: 2,
+        image: images.card2,
+        title: (
+            <p>
+                Old <br /> Skool Shoes
+            </p>
+        ),
+        price: '55.99',
+    },
+    {
+        id: 3,
+        image: images.card3,
+        title: (
+            <p>
+                Create Old Skool <br /> Reissue Dx Shoes
+            </p>
+        ),
+        price: '55.99',
+    },
+    {
+        id: 4,
+        image: images.card4,
+        title: (
+            <p>
+                Varsity Suede <br /> Old Skool Shoes
+            </p>
+        ),
+        price: '55.99',
+    },
+    {
+        id: 5,
+        image: images.card5,
+        title: (
+            <p>
+                SK9-HI <br /> MTE Shoes
+            </p>
+        ),
+        price: '55.99',
+    },
+];

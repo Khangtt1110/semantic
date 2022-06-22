@@ -16,7 +16,7 @@ const Introduce = () => {
             >
                 {IntroduceData.content}
             </Header>
-            <RectangleButton name="Discover Now" color="red" size="big" icon="angle right" />
+            <RectangleButton name="Discover Now" color="red" icon="angle right" />
         </Container>
     );
 };
