@@ -1,4 +1,4 @@
-import images from '../asserts';
+import images from '../assets';
 
 export const HeaderData = [
     {
@@ -96,7 +96,7 @@ export const ProductsData = [
 
 export const bannerData = [
     {
-        number: '01',
+        id: '01',
         title: (
             <p>
                 This <br /> Season's <br /> Must-haves
@@ -113,7 +113,7 @@ export const bannerData = [
         active: true,
     },
     {
-        number: '02',
+        id: '02',
         title: (
             <p>
                 New <br /> Arrivals <br /> Pro Skate
@@ -124,3 +124,87 @@ export const bannerData = [
         active: false,
     },
 ];
+
+export const customCardData = [
+    {
+        id: '01',
+        image: images.picture1,
+        title: (
+            <p>
+                Vans unveils fall '16 <br />
+                all weather MTE footrwear <br />
+                and apparel collection
+            </p>
+        ),
+        readMore: true,
+        date: '21/08/2016',
+        like: 2,
+    },
+    {
+        id: '02',
+        image: images.picture2,
+        title: (
+            <p>
+                Vans releases world's <br />
+                most customizable boot <br />
+                with the pat moore infuse
+            </p>
+        ),
+        readMore: true,
+        date: '21/08/2016',
+        like: 12,
+    },
+    {
+        id: '03',
+        image: images.picture3,
+        title: (
+            <p>
+                Vans shop <br />
+                riot finals <br />
+                2016
+            </p>
+        ),
+        readMore: true,
+        date: '21/08/2016',
+        like: 7,
+    },
+];
+
+export const customBannerData = [
+    {
+        id: '03',
+        title: (
+            <p>
+                Uniform <br /> Friendly <br /> Shoes
+            </p>
+        ),
+        button: 'Discover More',
+        image: images.banner2,
+        active: false,
+    },
+];
+
+export const infoData = {
+    title: 'Corporate Info',
+    content: ['Careers', 'B2B', 'Privacy policy', 'Term & Condition', 'Cookies'],
+};
+
+export const serviceData = {
+    title: 'Customer Service',
+    content: ['FAQ', 'Contact Us', 'Sizing Charts'],
+};
+
+export const socialData = {
+    title: 'Follow vans:',
+    children: [
+        { name: 'facebook', icon: 'facebook f' },
+        { name: 'twitter', icon: 'twitter' },
+        { name: 'instagram', icon: 'instagram' },
+        { name: 'youtube', icon: 'youtube' },
+    ],
+};
+
+export const newsletterData = {
+    title: 'Sign up vans newsletter:',
+    description: 'Subscribe to our newsletter to get latest news about our products, events and sales',
+};

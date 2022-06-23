@@ -45,21 +45,29 @@ body {
         cursor: pointer;
     }
 
-    p {
-        margin: 0;
-    }
-
-    .ui.button {
+    .ui.button,
+    .ui.input > input,
+    .ui.action.input:not([class*='left action']) > .button:last-child {
         border-radius: 0;
         font-weight: 200;
     }
 
-    i.bordered.icon {
+    i.bordered.icon,
+    .ui.segment {
         -webkit-box-shadow: none;
         box-shadow: none;
+        padding: 0;
+        margin: 0;
     }
 
-    .ui.cards>.card {
+    p,
+    .ui.list,
+    .ui.cards,
+    .ui.cards ~ .ui.cards {
+        margin: 0;
+    }
+
+    .ui.cards > .card {
         margin: 0 !important;
         border-radius: 0;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -76,8 +84,8 @@ body {
         }
     }
 
-    .ui.card>.image,
-    .ui.cards>.card>.image {
+    .ui.card > .image,
+    .ui.cards > .card > .image {
         background: none;
     }
 }

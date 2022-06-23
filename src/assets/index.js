@@ -8,6 +8,10 @@ const images = {
     card5: require('./VansCard05.jpg'),
     clothes: require('./VansClothes.png'),
     banner: require('./Picture04.png'),
+    picture1: require('./Picture01.jpg'),
+    picture2: require('./Picture02.jpg'),
+    picture3: require('./Picture03.jpg'),
+    banner2: require('./Picture05.png'),
 };
 
 export default images;

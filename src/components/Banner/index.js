@@ -4,17 +4,16 @@ import styles from './Banner.module.scss';
 import classNames from 'classnames/bind';
 import Divider from '../Divide';
 import RectangleButton from '../RectangleButton';
-import { bannerData } from '../../data';
 
 const cx = classNames.bind(styles);
 
-const Banner = () => {
+const Banner = ({ data }) => {
     return (
         <Card.Group centered stackable className={cx('wrapper')}>
-            {bannerData.map((item) => (
-                <Card link className={item.number === '01' ? cx('first-banner') : cx('second-banner')}>
+            {data.map((item) => (
+                <Card key={item.id} link className={item.id === '01' ? cx('first-banner') : cx('second-banner')}>
                     <CardContent className={cx('content')}>
-                        <Card.Header as="h1" className={cx('number')} content={item.number}></Card.Header>
+                        <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
                         <Card.Description className={cx('description')}>
                             {item.title}
                             <Divider width="2rem" margin="30px 0" />
@@ -28,10 +27,10 @@ const Banner = () => {
                                     <div>
                                         <Card.Description textAlign="center" className={cx('context')}>
                                             <Card.Header as="h5" content={item.content} />
-                                            <div style={{ display: 'flex', textAlign: 'center' }}>
-                                                <Divider margin="auto" width="10%" />
-                                                <Divider margin="auto" width="10%" />
-                                                <Divider margin="auto" width="10%" />
+                                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                                <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />
+                                                <Divider margin="0 2px" width="10%" padding="1px" color="red" />
+                                                <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />
                                             </div>
                                         </Card.Description>
 

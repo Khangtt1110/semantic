@@ -1,5 +1,5 @@
 .wrapper {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .logo {
@@ -10,11 +10,23 @@
 .search {
     width: 25% !important;
 
+    input,
+    input::placeholder {
+        font-family: var(--font-family);
+        color: white !important;
+    }
+
     & > div {
         margin-left: 30px !important;
     }
 }
 
 .card {
-    border-left: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.label-count {
+    top: 10px !important;
+    padding: 7px !important;
+    left: 75px !important;
 }
