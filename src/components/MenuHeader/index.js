@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 const MenuHeader = () => {
     // Get count in redux store
-    const { count } = useSelector((state) => state.counter);
+    const counter = useSelector((state) => state.counter.total);
 
     return (
         <Menu stackable secondary inverted compact borderless widths={9} className={cx('wrapper')}>
@@ -40,9 +40,9 @@ const MenuHeader = () => {
             {/* Card */}
             <Menu.Item as="button" name="Card" className={cx('card')}>
                 <Icon bordered name="shopping basket" color="red" size="large" fitted />
-                {count > 0 ? (
+                {counter > 0 ? (
                     <Label color="red" floating size="mini" className={cx('label-count')}>
-                        {count}
+                        {counter}
                     </Label>
                 ) : null}
             </Menu.Item>

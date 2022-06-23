@@ -41,7 +41,7 @@ export const FeaturedProductData = {
     gender: ['Men', 'Women', 'Unisex'],
 };
 
-export const ProductsData = [
+export const productsData = [
     {
         id: 1,
         image: images.card1,
@@ -51,6 +51,7 @@ export const ProductsData = [
             </p>
         ),
         price: '55.99',
+        amount: 0,
     },
     {
         id: 2,
@@ -61,6 +62,7 @@ export const ProductsData = [
             </p>
         ),
         price: '55.99',
+        amount: 0,
     },
     {
         id: 3,
@@ -71,6 +73,7 @@ export const ProductsData = [
             </p>
         ),
         price: '55.99',
+        amount: 0,
     },
     {
         id: 4,
@@ -81,6 +84,7 @@ export const ProductsData = [
             </p>
         ),
         price: '55.99',
+        amount: 0,
     },
     {
         id: 5,
@@ -91,6 +95,7 @@ export const ProductsData = [
             </p>
         ),
         price: '55.99',
+        amount: 0,
     },
 ];
 

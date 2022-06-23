@@ -7,7 +7,7 @@ export const like = createSlice({
     initialState,
     reducers: {
         likeAction(state, action) {
-            const { e, id } = action.payload;
+            const { id, e } = action.payload;
             const isActive = e.target.classList[0] === 'active' ? true : false;
 
             if (isActive) {
