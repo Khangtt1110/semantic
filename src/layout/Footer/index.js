@@ -11,8 +11,8 @@ const Footer = () => {
     return (
         <div className={cx('wrapper')}>
             <Container style={{ display: 'flex', padding: '5rem 0' }}>
-                <Grid>
-                    <Grid.Column computer={3} tablet={8} mobile={8}>
+                <Grid style={{ width: '100%' }}>
+                    <Grid.Column computer={4} tablet={8} mobile={8}>
                         <Contact data={infoData} />
                     </Grid.Column>
                     <Grid.Column computer={4} tablet={8} mobile={8}>
@@ -21,7 +21,7 @@ const Footer = () => {
                     <Grid.Column computer={4} tablet={8} mobile={16}>
                         <Contact data={socialData} />
                     </Grid.Column>
-                    <Grid.Column computer={5} tablet={8} mobile={14}>
+                    <Grid.Column computer={4} tablet={8} mobile={14}>
                         <Contact data={newsletterData} />
                     </Grid.Column>
                 </Grid>

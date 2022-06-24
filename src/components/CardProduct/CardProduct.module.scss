@@ -1,7 +1,7 @@
 .wrapper {
-
+    width: 100% !important;
     .image {
-        padding: 0 20px 40px !important;
+        padding: 0 60px 40px !important;
     }
 
     .picture {
@@ -9,6 +9,8 @@
     }
 
     &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+
         .card {
             visibility: inherit;
         }
