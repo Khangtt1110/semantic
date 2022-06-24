@@ -16,7 +16,7 @@
         color: white !important;
     }
 
-    & > div {
+    &>div {
         margin-left: 30px !important;
     }
 }
@@ -27,11 +27,11 @@
     color: white;
     display: flex !important;
     align-items: center;
-    justify-content: center;
 }
 
 .card {
     border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+    justify-content: center;
 }
 
 .label-count {
@@ -51,6 +51,7 @@
     .wrapper {
         height: 60px;
     }
+
     .label-count {
         top: 4px !important;
         left: 49px !important;

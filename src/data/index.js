@@ -30,11 +30,20 @@ export const HeaderData = [
         icon: 'add user',
         computer: 2,
         tablet: 3,
+        position: 'center',
         active: true,
     },
 ];
 
-export const ListHeaderData = ['Men', 'Women', 'Kids', 'New Arrivals', 'Skate', 'Latest', '#Houseofvans'];
+export const ListHeaderData = [
+    { content: 'Men', width: 2 },
+    { content: 'Women', width: 2 },
+    { content: 'Kids', width: 2 },
+    { content: 'New Arrivals', width: 3 },
+    { content: 'Skate', width: 1, position: 'end' },
+    { content: 'Latest', width: 4, position: 'center' },
+    { content: 'Houseofvans', width: 2, position: 'center' },
+];
 
 export const IntroduceData = {
     title: 'Vans is old skool',

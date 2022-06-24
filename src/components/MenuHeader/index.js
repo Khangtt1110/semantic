@@ -36,7 +36,8 @@ const MenuHeader = () => {
                     computer={item.computer}
                     className={cx('menu')}
                     tablet={item.tablet}
-                    only="computer table"
+                    only="computer tablet"
+                    style={{ justifyContent: item.position || 'left' }}
                 >
                     <p style={item.active && { color: 'red' }}>{item.name}</p>
                     <Icon bordered name={item.icon} color={item.active && 'red'} />

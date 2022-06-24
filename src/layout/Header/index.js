@@ -15,11 +15,8 @@ const Headers = () => {
             <Container>
                 <Grid>
                     <MenuHeader />
-                    <Grid.Row>
-                        <ListHeader />
-                    </Grid.Row>
+                    <ListHeader />
                 </Grid>
-
                 <Introduce />
                 <ScrollDown />
             </Container>
