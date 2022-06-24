@@ -10,11 +10,17 @@ const Introduce = () => {
                 {IntroduceData.title}
             </Header>
             <Header
-                as="h5"
+                as="h4"
                 inverted
-                style={{ fontWeight: 200, opacity: '0.8', letterSpacing: '1px', marginBottom: '30px' }}
+                style={{
+                    fontWeight: 200,
+                    opacity: '0.8',
+                    letterSpacing: '1px',
+                    marginBottom: '30px',
+                    lineHeight: '1.5rem',
+                }}
             >
-                {IntroduceData.content}
+                <div dangerouslySetInnerHTML={{ __html: IntroduceData.content }}></div>
             </Header>
             <RectangleButton name="Discover Now" color="red" icon="angle right" />
         </Container>

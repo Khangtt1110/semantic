@@ -38,8 +38,8 @@ const CardProduct = ({ data }) => {
 
                     <Image src={item.image} className={item.readMore ? cx('picture') : cx('image')} />
 
-                    <Card.Description textAlign="center" className={cx('context')}>
-                        <Card.Header as="h5" content={item.title} />
+                    <Card.Description textAlign="center">
+                        <Card.Header as="h5" dangerouslySetInnerHTML={{ __html: item.title }} />
                         <Divider margin="auto" width="10%" />
                     </Card.Description>
 

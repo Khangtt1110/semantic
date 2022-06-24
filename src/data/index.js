@@ -28,12 +28,7 @@ export const ListHeaderData = ['Men', 'Women', 'Kids', 'New Arrivals', 'Skate', 
 
 export const IntroduceData = {
     title: 'Vans is old skool',
-    content: (
-        <p>
-            Introduced in 1977, the style #36, now know as <br /> old skool, was the first vans shoe to <br />
-            feature the iconic sidestripe
-        </p>
-    ),
+    content: `Introduced in 1977, the style #36, now know as <br /> old skool, was the first vans shoe to <br />feature the iconic sidestripe`,
 };
 
 export const FeaturedProductData = {
@@ -45,55 +40,35 @@ export const productsData = [
     {
         id: 1,
         image: images.card1,
-        title: (
-            <p>
-                Mono Old <br /> Skool Shoes
-            </p>
-        ),
+        title: 'Mono Old <br /> Skool Shoes',
         price: '55.99',
         amount: 0,
     },
     {
         id: 2,
         image: images.card2,
-        title: (
-            <p>
-                Old <br /> Skool Shoes
-            </p>
-        ),
+        title: 'Old <br /> Skool Shoes',
         price: '55.99',
         amount: 0,
     },
     {
         id: 3,
         image: images.card3,
-        title: (
-            <p>
-                Create Old Skool <br /> Reissue Dx Shoes
-            </p>
-        ),
+        title: 'Create Old Skool <br /> Reissue Dx Shoes',
         price: '55.99',
         amount: 0,
     },
     {
         id: 4,
         image: images.card4,
-        title: (
-            <p>
-                Varsity Suede <br /> Old Skool Shoes
-            </p>
-        ),
+        title: 'Varsity Suede <br /> Old Skool Shoes',
         price: '55.99',
         amount: 0,
     },
     {
         id: 5,
         image: images.card5,
-        title: (
-            <p>
-                SK9-HI <br /> MTE Shoes
-            </p>
-        ),
+        title: 'SK9-HI <br /> MTE Shoes',
         price: '55.99',
         amount: 0,
     },
@@ -102,28 +77,16 @@ export const productsData = [
 export const bannerData = [
     {
         id: '01',
-        title: (
-            <p>
-                This <br /> Season's <br /> Must-haves
-            </p>
-        ),
+        title: "This <br /> Season's <br /> Must-haves",
         button: 'show now',
         image: images.clothes,
-        content: (
-            <p>
-                Vans dipped palm <br /> island youth t-shirt
-            </p>
-        ),
+        content: 'Vans dipped palm <br /> island youth t-shirt',
         price: 19.99,
         active: true,
     },
     {
         id: '02',
-        title: (
-            <p>
-                New <br /> Arrivals <br /> Pro Skate
-            </p>
-        ),
+        title: 'New <br /> Arrivals <br /> Pro Skate',
         button: 'Discover More',
         image: images.banner,
         active: false,
@@ -134,13 +97,7 @@ export const customCardData = [
     {
         id: '01',
         image: images.picture1,
-        title: (
-            <p>
-                Vans unveils fall '16 <br />
-                all weather MTE footrwear <br />
-                and apparel collection
-            </p>
-        ),
+        title: " Vans unveils fall '16 <br/> all weather MTE footrwear <br />and apparel collection</p>",
         readMore: true,
         date: '21/08/2016',
         like: 2,
@@ -148,13 +105,7 @@ export const customCardData = [
     {
         id: '02',
         image: images.picture2,
-        title: (
-            <p>
-                Vans releases world's <br />
-                most customizable boot <br />
-                with the pat moore infuse
-            </p>
-        ),
+        title: " Vans releases world's <br />most customizable boot <br /> with the pat moore infuse",
         readMore: true,
         date: '21/08/2016',
         like: 12,
@@ -162,13 +113,7 @@ export const customCardData = [
     {
         id: '03',
         image: images.picture3,
-        title: (
-            <p>
-                Vans shop <br />
-                riot finals <br />
-                2016
-            </p>
-        ),
+        title: 'Vans shop <br/>riot finals <br />2016',
         readMore: true,
         date: '21/08/2016',
         like: 7,
@@ -178,11 +123,7 @@ export const customCardData = [
 export const customBannerData = [
     {
         id: '03',
-        title: (
-            <p>
-                Uniform <br /> Friendly <br /> Shoes
-            </p>
-        ),
+        title: 'Uniform <br /> Friendly <br /> Shoes',
         button: 'Discover More',
         image: images.banner2,
         active: false,

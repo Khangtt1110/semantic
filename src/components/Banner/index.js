@@ -15,7 +15,7 @@ const Banner = ({ data }) => {
                     <CardContent className={cx('content')}>
                         <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
                         <Card.Description className={cx('description')}>
-                            {item.title}
+                            <div dangerouslySetInnerHTML={{ __html: item.title }}></div>
                             <Divider width="2rem" margin="30px 0" />
                             <RectangleButton name={item.button} color="red" icon="angle right" />
                         </Card.Description>
@@ -25,8 +25,8 @@ const Banner = ({ data }) => {
                                 <Image src={item.image} />
                                 {item.active && (
                                     <div>
-                                        <Card.Description textAlign="center" className={cx('context')}>
-                                            <Card.Header as="h5" content={item.content} />
+                                        <Card.Description textAlign="center">
+                                            <h5 dangerouslySetInnerHTML={{ __html: item.content }}></h5>
                                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                                 <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />
                                                 <Divider margin="0 2px" width="10%" padding="1px" color="red" />
