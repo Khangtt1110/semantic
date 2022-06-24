@@ -5,12 +5,23 @@ import classNames from 'classnames/bind';
 import Divider from '../Divide';
 import { useDispatch } from 'react-redux';
 import { increment } from '../../redux/counter';
-import { likeAction } from '../../redux/like';
+import { likeAction, unLikeAction } from '../../redux/like';
 
 const cx = classNames.bind(styles);
 
 const CardProduct = ({ data }) => {
     const dispatch = useDispatch();
+
+    // function to check active and increase like
+    const handleGetActive = (id, e) => {
+        const isActive = e.target.classList[0] === 'active' ? true : false;
+        if (!isActive) {
+            dispatch(likeAction(id));
+            return;
+        }
+        dispatch(unLikeAction(id));
+    };
+
     return (
         <Card.Group centered stackable>
             {data.map((item) => (
@@ -19,7 +30,7 @@ const CardProduct = ({ data }) => {
                         <Card.Content className={cx('info')}>
                             <Card.Meta className={cx('date')}>{item.date}</Card.Meta>
                             <Card.Content className={cx('info')}>
-                                <Rating icon="heart" onClick={(e) => dispatch(likeAction({ id: item.id, e }))} />
+                                <Rating icon="heart" onClick={(e) => handleGetActive({ id: item.id }, e)} />
                                 <Card.Meta className={cx('date')}>{String(item.like).padStart(2, '0')}</Card.Meta>
                             </Card.Content>
                         </Card.Content>

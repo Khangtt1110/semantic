@@ -7,17 +7,15 @@ export const like = createSlice({
     initialState,
     reducers: {
         likeAction(state, action) {
-            const { id, e } = action.payload;
-            const isActive = e.target.classList[0] === 'active' ? true : false;
-
-            if (isActive) {
-                state.customCardData.find((c) => c.id === id).like--;
-                return;
-            }
+            const { id } = action.payload;
             state.customCardData.find((c) => c.id === id).like++;
+        },
+        unLikeAction(state, action) {
+            const { id } = action.payload;
+            state.customCardData.find((c) => c.id === id).like--;
         },
     },
 });
 
-export const { likeAction } = like.actions;
+export const { likeAction, unLikeAction } = like.actions;
 export default like.reducer;

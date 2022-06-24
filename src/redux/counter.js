@@ -10,7 +10,9 @@ export const counterSlice = createSlice({
         increment(state, action) {
             const { id } = action.payload;
             state.productsData.find((c) => c.id === id).amount++;
+            console.log(state.productsData.find((c) => c.id === id).amount);
             state.total++;
+            console.log(state.total);
         },
     },
 });
