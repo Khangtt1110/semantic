@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 import Headers from '../../layout/Header';
@@ -16,6 +16,7 @@ const cx = classNames.bind(styles);
 const Home = () => {
     const customCardData = useSelector((state) => state.like.customCardData);
     const productsData = useSelector((state) => state.counter.productsData);
+    // const getScreenSize = useSelector((state) => state.screenSize.screenWidth);
 
     return (
         <>
