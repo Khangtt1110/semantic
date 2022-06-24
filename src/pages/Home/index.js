@@ -3,7 +3,7 @@ import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 import Headers from '../../layout/Header';
 import Footer from '../../layout/Footer';
-import { Segment } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 import FeatureProduct from '../../components/FeatureProduct';
 import CardProduct from '../../components/CardProduct';
 import Banner from '../../components/Banner';
@@ -23,10 +23,20 @@ const Home = () => {
             <Headers />
             <div className={cx('wrapper')}>
                 <Segment>
-                    <FeatureProduct />
-                    <CardProduct data={productsData} />
-                    <Banner data={bannerData} />
-                    <CustomCard cardData={customCardData} bannerData={customBannerData} />
+                    <Grid centered padded>
+                        <Grid.Row>
+                            <FeatureProduct />
+                        </Grid.Row>
+                        <Grid.Row>
+                            <CardProduct data={productsData} />
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Banner data={bannerData} />
+                        </Grid.Row>
+                        <Grid.Row>
+                            <CustomCard cardData={customCardData} bannerData={customBannerData} />
+                        </Grid.Row>
+                    </Grid>
                 </Segment>
                 <Footer />
             </div>

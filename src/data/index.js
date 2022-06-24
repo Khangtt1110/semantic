@@ -82,6 +82,7 @@ export const bannerData = [
         image: images.clothes,
         content: 'Vans dipped palm <br /> island youth t-shirt',
         price: 19.99,
+        width: 9,
         active: true,
     },
     {
@@ -89,6 +90,7 @@ export const bannerData = [
         title: 'New <br /> Arrivals <br /> Pro Skate',
         button: 'Discover More',
         image: images.banner,
+        width: 6,
         active: false,
     },
 ];
@@ -126,6 +128,7 @@ export const customBannerData = [
         title: 'Uniform <br /> Friendly <br /> Shoes',
         button: 'Discover More',
         image: images.banner2,
+        width: 6,
         active: false,
     },
 ];

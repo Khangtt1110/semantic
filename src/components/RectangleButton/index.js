@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Icon } from 'semantic-ui-react';
 
-const RectangleButton = ({ name, color, size, icon = false, height, width, margin }) => {
+const RectangleButton = ({ name, color, size, icon = false, height, width, margin, fontSize = '2rem' }) => {
     return (
         <Button
             color={color}
@@ -18,7 +18,7 @@ const RectangleButton = ({ name, color, size, icon = false, height, width, margi
                             name
                                 ? { fontSize: '1.2rem' }
                                 : {
-                                      fontSize: '2rem',
+                                      fontSize: fontSize,
                                       margin: 0,
                                       height: 0,
                                       display: 'flex',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Image } from 'semantic-ui-react';
+import { Card, CardContent, Image, Grid } from 'semantic-ui-react';
 import styles from './Banner.module.scss';
 import classNames from 'classnames/bind';
 import Divider from '../Divide';
@@ -8,47 +8,73 @@ import RectangleButton from '../RectangleButton';
 const cx = classNames.bind(styles);
 
 const Banner = ({ data }) => {
+    const normalDivider = <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />;
+    const activeDiver = <Divider margin="0 2px" width="10%" padding="1px" color="red" />;
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
     return (
-        <Card.Group centered stackable className={cx('wrapper')}>
+        <>
             {data.map((item) => (
-                <Card key={item.id} link className={item.id === '01' ? cx('first-banner') : cx('second-banner')}>
-                    <CardContent className={cx('content')}>
-                        <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
-                        <Card.Description className={cx('description')}>
-                            <div dangerouslySetInnerHTML={{ __html: item.title }}></div>
-                            <Divider width="2rem" margin="30px 0" />
-                            <RectangleButton name={item.button} color="red" icon="angle right" />
-                        </Card.Description>
-                        <Card.Description className={cx('elements')}>
-                            {item.active && <RectangleButton icon="angle left" width="50px" margin="12rem auto 0" />}
-                            <Card.Content>
-                                <Image src={item.image} />
+                <Grid.Column computer={item.width} mobile={16}>
+                    <Card key={item.id} link className={cx('wrapper')}>
+                        <CardContent className={cx('content')}>
+                            <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
+                            <Card.Description className={cx('description')}>
+                                <div dangerouslySetInnerHTML={{ __html: item.title }}></div>
+                                <Divider width="2rem" margin="30px 0" />
+                                <RectangleButton name={item.button} color="red" icon="angle right" />
+                            </Card.Description>
+                            <Card.Description className={cx('elements')}>
                                 {item.active && (
-                                    <div>
-                                        <Card.Description textAlign="center">
-                                            <h5 dangerouslySetInnerHTML={{ __html: item.content }}></h5>
-                                            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                                <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />
-                                                <Divider margin="0 2px" width="10%" padding="1px" color="red" />
-                                                <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />
-                                            </div>
-                                        </Card.Description>
-
-                                        <Card.Meta textAlign="center" className={cx('price')}>
-                                            ${item.price}
-                                        </Card.Meta>
-                                    </div>
+                                    <RectangleButton
+                                        icon="angle left"
+                                        fontSize="1rem"
+                                        width={width < 767 ? '30px' : '50px'}
+                                        height={width < 767 ? '30px' : '50px'}
+                                        margin={width < 767 ? '5rem auto 0' : '12rem auto 0'}
+                                    />
                                 )}
-                            </Card.Content>
+                                <Card.Content>
+                                    <Image src={item.image} />
+                                    {item.active && (
+                                        <div>
+                                            <Card.Description textAlign="center">
+                                                <h5 dangerouslySetInnerHTML={{ __html: item.content }}></h5>
+                                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                                    {normalDivider}
+                                                    {activeDiver}
+                                                    {normalDivider}
+                                                </div>
+                                            </Card.Description>
 
-                            {item.active && (
-                                <RectangleButton icon="angle right" width="50px" color="red" margin="12rem auto 0" />
-                            )}
-                        </Card.Description>
-                    </CardContent>
-                </Card>
+                                            <Card.Meta textAlign="center" className={cx('price')}>
+                                                ${item.price}
+                                            </Card.Meta>
+                                        </div>
+                                    )}
+                                </Card.Content>
+
+                                {item.active && (
+                                    <RectangleButton
+                                        icon="angle right"
+                                        fontSize="1rem"
+                                        width={width < 767 ? '30px' : '50px'}
+                                        height={width < 767 ? '30px' : '50px'}
+                                        color="red"
+                                        margin={width < 767 ? '5rem auto 0' : '12rem auto 0'}
+                                    />
+                                )}
+                            </Card.Description>
+                        </CardContent>
+                    </Card>
+                </Grid.Column>
             ))}
-        </Card.Group>
+        </>
     );
 };
 

@@ -23,7 +23,7 @@ const CardProduct = ({ data }) => {
     };
 
     return (
-        <Grid centered padded>
+        <>
             {data.map((item) => (
                 <Grid.Column key={item.id} computer={3} tablet={5} mobile={16}>
                     <Card link className={cx('wrapper')}>
@@ -62,7 +62,7 @@ const CardProduct = ({ data }) => {
                     </Card>
                 </Grid.Column>
             ))}
-        </Grid>
+        </>
     );
 };
 
