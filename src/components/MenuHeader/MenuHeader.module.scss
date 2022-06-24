@@ -1,14 +1,14 @@
 .wrapper {
+    height: 70px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .logo {
-    height: 64px !important;
-    margin-right: -32px !important;
+    height: 103% !important;
 }
 
 .search {
-    width: 25% !important;
+    justify-content: left !important;
 
     input,
     input::placeholder {
@@ -21,12 +21,38 @@
     }
 }
 
+.menu,
+.search,
+.card {
+    color: white;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .label-count {
-    top: 10px !important;
-    padding: 7px !important;
-    left: 75px !important;
+    top: 8px !important;
+    padding: 6px !important;
+    left: 83px !important;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .label-count {
+        top: 10px !important;
+        left: 37px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        height: 60px;
+    }
+    .label-count {
+        top: 4px !important;
+        left: 49px !important;
+    }
 }

@@ -4,22 +4,32 @@ export const HeaderData = [
     {
         name: 'Rest of Europe',
         icon: 'chevron down',
+        computer: 2,
+        tablet: 3,
     },
     {
         name: 'Store Locator',
         icon: 'map marker alternate',
+        computer: 2,
+        tablet: 3,
     },
     {
         name: 'Help',
         icon: 'help circle',
+        computer: 1,
+        tablet: 2,
     },
     {
         name: 'Login',
         icon: 'lock',
+        computer: 1,
+        tablet: 2,
     },
     {
         name: 'Register',
         icon: 'add user',
+        computer: 2,
+        tablet: 3,
         active: true,
     },
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Input, Icon, Image, Label } from 'semantic-ui-react';
+import { Input, Icon, Image, Label, Grid } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import styles from './MenuHeader.module.scss';
 import logo from '../../assets//VansLogoHeader.png';
@@ -13,14 +13,13 @@ const MenuHeader = () => {
     const counter = useSelector((state) => state.counter.total);
 
     return (
-        <Menu stackable secondary inverted compact borderless widths={9} className={cx('wrapper')}>
-            <Menu.Item fitted>
-                {/* <div className={cx('logo')}></div> */}
+        <Grid.Row className={cx('wrapper')}>
+            <Grid.Column computer={2} tablet={2} mobile={4}>
                 <Image src={logo} size="big" className={cx('logo')} />
-            </Menu.Item>
+            </Grid.Column>
 
             {/* Search */}
-            <Menu.Item className={cx('search')}>
+            <Grid.Column computer={4} mobile={9} className={cx('search')} only="computer mobile">
                 <Input
                     transparent
                     color="teal"
@@ -29,24 +28,30 @@ const MenuHeader = () => {
                     placeholder="SEARCH..."
                     size="small"
                 ></Input>
-            </Menu.Item>
+            </Grid.Column>
             {/* List */}
             {HeaderData.map((item) => (
-                <Menu.Item as="button" key={item.name}>
+                <Grid.Column
+                    key={item.name}
+                    computer={item.computer}
+                    className={cx('menu')}
+                    tablet={item.tablet}
+                    only="computer table"
+                >
                     <p style={item.active && { color: 'red' }}>{item.name}</p>
                     <Icon bordered name={item.icon} color={item.active && 'red'} />
-                </Menu.Item>
+                </Grid.Column>
             ))}
             {/* Card */}
-            <Menu.Item as="button" name="Card" className={cx('card')}>
+            <Grid.Column className={cx('card')} computer={2} tablet={1} mobile={3}>
                 <Icon bordered name="shopping basket" color="red" size="large" fitted />
                 {counter > 0 ? (
                     <Label color="red" floating size="mini" className={cx('label-count')}>
                         {counter}
                     </Label>
                 ) : null}
-            </Menu.Item>
-        </Menu>
+            </Grid.Column>
+        </Grid.Row>
     );
 };
 

@@ -16,7 +16,13 @@ const cx = classNames.bind(styles);
 const Home = () => {
     const customCardData = useSelector((state) => state.like.customCardData);
     const productsData = useSelector((state) => state.counter.productsData);
-    // const getScreenSize = useSelector((state) => state.screenSize.screenWidth);
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
 
     return (
         <>
@@ -31,7 +37,7 @@ const Home = () => {
                             <CardProduct data={productsData} />
                         </Grid.Row>
                         <Grid.Row>
-                            <Banner data={bannerData} />
+                            <Banner data={bannerData} width={width} />
                         </Grid.Row>
                         <Grid.Row>
                             <CustomCard cardData={customCardData} bannerData={customBannerData} />

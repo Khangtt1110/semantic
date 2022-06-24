@@ -7,21 +7,16 @@ import RectangleButton from '../RectangleButton';
 
 const cx = classNames.bind(styles);
 
-const Banner = ({ data }) => {
+const Banner = ({ data, width }) => {
+    const mobile = width < 767 ? true : false;
     const normalDivider = <Divider margin="0 2px" width="10%" padding="1px" color="darkgrey" />;
     const activeDiver = <Divider margin="0 2px" width="10%" padding="1px" color="red" />;
-    const [width, setWidth] = React.useState(window.innerWidth);
 
-    React.useEffect(() => {
-        const handleWindowResize = () => setWidth(window.innerWidth);
-        window.addEventListener('resize', handleWindowResize);
-        return () => window.removeEventListener('resize', handleWindowResize);
-    }, []);
     return (
         <>
             {data.map((item) => (
-                <Grid.Column computer={item.width} mobile={16}>
-                    <Card key={item.id} link className={cx('wrapper')}>
+                <Grid.Column key={item.id} computer={item.width} mobile={16}>
+                    <Card link className={cx('wrapper')}>
                         <CardContent className={cx('content')}>
                             <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
                             <Card.Description className={cx('description')}>
@@ -33,10 +28,10 @@ const Banner = ({ data }) => {
                                 {item.active && (
                                     <RectangleButton
                                         icon="angle left"
-                                        fontSize="1rem"
-                                        width={width < 767 ? '30px' : '50px'}
-                                        height={width < 767 ? '30px' : '50px'}
-                                        margin={width < 767 ? '5rem auto 0' : '12rem auto 0'}
+                                        fontSize={mobile ? '1rem' : '2rem'}
+                                        width={mobile ? '30px' : '50px'}
+                                        height={mobile ? '30px' : '50px'}
+                                        margin={mobile ? '5rem auto 0' : '12rem auto 0'}
                                     />
                                 )}
                                 <Card.Content>
@@ -62,11 +57,11 @@ const Banner = ({ data }) => {
                                 {item.active && (
                                     <RectangleButton
                                         icon="angle right"
-                                        fontSize="1rem"
-                                        width={width < 767 ? '30px' : '50px'}
-                                        height={width < 767 ? '30px' : '50px'}
+                                        fontSize={mobile ? '1rem' : '2rem'}
+                                        width={mobile ? '30px' : '50px'}
+                                        height={mobile ? '30px' : '50px'}
                                         color="red"
-                                        margin={width < 767 ? '5rem auto 0' : '12rem auto 0'}
+                                        margin={mobile ? '5rem auto 0' : '12rem auto 0'}
                                     />
                                 )}
                             </Card.Description>

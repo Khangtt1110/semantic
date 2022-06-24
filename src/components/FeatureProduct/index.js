@@ -5,7 +5,7 @@ import GenderCheckbox from '../GenderCheckbox';
 
 const FeatureProduct = () => {
     return (
-        <Grid container stackable centered style={{ margin: '50px' }}>
+        <Grid container centered style={{ margin: '50px' }}>
             <Grid.Row>
                 <Header as="h1" style={{ letterSpacing: '2px', fontSize: '3rem', fontWeight: 500 }}>
                     {FeaturedProductData.name}
