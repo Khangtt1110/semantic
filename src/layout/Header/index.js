@@ -9,16 +9,16 @@ import ScrollDown from '../../components/ScrollDown';
 
 const cx = classNames.bind(styles);
 
-const Headers = () => {
+const Headers = ({ mobile }) => {
     return (
         <div className={cx('wrapper')}>
             <Container>
                 <Grid>
                     <MenuHeader />
-                    <ListHeader />
+                    <ListHeader mobile={mobile} />
                 </Grid>
-                <Introduce />
-                <ScrollDown />
+                <Introduce mobile={mobile} />
+                <ScrollDown mobile={mobile} />
             </Container>
         </div>
     );

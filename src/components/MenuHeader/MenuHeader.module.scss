@@ -1,6 +1,10 @@
 .wrapper {
     height: 70px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+    .border-none {
+        border-right: none !important;
+    }
 }
 
 .logo {
@@ -16,7 +20,7 @@
         color: white !important;
     }
 
-    &>div {
+    & > div {
         margin-left: 30px !important;
     }
 }

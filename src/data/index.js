@@ -42,7 +42,7 @@ export const ListHeaderData = [
     { content: 'New Arrivals', width: 3 },
     { content: 'Skate', width: 1, position: 'end' },
     { content: 'Latest', width: 4, position: 'center' },
-    { content: 'Houseofvans', width: 2, position: 'center' },
+    { content: '#Houseofvans', width: 2, position: 'center' },
 ];
 
 export const IntroduceData = {
@@ -95,7 +95,7 @@ export const productsData = [
 
 export const bannerData = [
     {
-        id: '01',
+        id: 1,
         title: "This <br /> Season's <br /> Must-haves",
         button: 'show now',
         image: images.clothes,
@@ -105,7 +105,7 @@ export const bannerData = [
         active: true,
     },
     {
-        id: '02',
+        id: 2,
         title: 'New <br /> Arrivals <br /> Pro Skate',
         button: 'Discover More',
         image: images.banner,
@@ -116,7 +116,7 @@ export const bannerData = [
 
 export const customCardData = [
     {
-        id: '01',
+        id: 1,
         image: images.picture1,
         title: " Vans unveils fall '16 <br/> all weather MTE footrwear <br />and apparel collection</p>",
         readMore: true,
@@ -124,7 +124,7 @@ export const customCardData = [
         like: 2,
     },
     {
-        id: '02',
+        id: 2,
         image: images.picture2,
         title: " Vans releases world's <br />most customizable boot <br /> with the pat moore infuse",
         readMore: true,
@@ -132,7 +132,7 @@ export const customCardData = [
         like: 12,
     },
     {
-        id: '03',
+        id: 3,
         image: images.picture3,
         title: 'Vans shop <br/>riot finals <br />2016',
         readMore: true,
@@ -143,7 +143,7 @@ export const customCardData = [
 
 export const customBannerData = [
     {
-        id: '03',
+        id: 3,
         title: 'Uniform <br /> Friendly <br /> Shoes',
         button: 'Discover More',
         image: images.banner2,

@@ -3,9 +3,9 @@ import { Container, Header } from 'semantic-ui-react';
 import { IntroduceData } from '../../data';
 import RectangleButton from '../RectangleButton';
 
-const Introduce = () => {
+const Introduce = ({ mobile }) => {
     return (
-        <Container style={{ margin: '150px', paddingLeft: '100px' }}>
+        <Container style={mobile ? { margin: '80px' } : { margin: '150px', paddingLeft: '100px' }}>
             <Header as="h1" inverted style={{ fontSize: '4rem', fontWeight: 200 }}>
                 {IntroduceData.title}
             </Header>

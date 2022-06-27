@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Container, Grid, Icon, Image, Rating } from 'semantic-ui-react';
+import { Button, Card, Grid, Icon, Image, Rating } from 'semantic-ui-react';
 import styles from './CardProduct.module.scss';
 import classNames from 'classnames/bind';
 import Divider from '../Divide';
@@ -25,8 +25,8 @@ const CardProduct = ({ data }) => {
     return (
         <>
             {data.map((item) => (
-                <Grid.Column key={item.id} computer={3} tablet={5} mobile={16}>
-                    <Card link className={cx('wrapper')}>
+                <Grid.Column key={item.id} computer={3} tablet={5} mobile={16} className={cx('wrapper')}>
+                    <Card link className={cx('container')}>
                         {item.readMore ? (
                             <Card.Content className={cx('info')}>
                                 <Card.Meta className={cx('date')}>{item.date}</Card.Meta>
@@ -58,7 +58,9 @@ const CardProduct = ({ data }) => {
                         <Card.Meta as="a" textAlign="center" className={item.readMore ? cx('read-more') : cx('price')}>
                             {item.readMore ? 'Read more' : `$${item.price}`}
                         </Card.Meta>
-                        {item.readMore && <Card.Meta className={cx('number')}>{item.id}</Card.Meta>}
+                        {item.readMore && (
+                            <Card.Meta className={cx('number')}>{String(item.id).padStart(2, '0')}</Card.Meta>
+                        )}
                     </Card>
                 </Grid.Column>
             ))}

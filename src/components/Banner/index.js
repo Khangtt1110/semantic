@@ -15,10 +15,19 @@ const Banner = ({ data, width }) => {
     return (
         <>
             {data.map((item) => (
-                <Grid.Column key={item.id} computer={item.width} mobile={16}>
+                <Grid.Column
+                    key={item.id}
+                    computer={item.width}
+                    mobile={16}
+                    className={item.active ? '' : cx('border-left')}
+                >
                     <Card link className={cx('wrapper')}>
                         <CardContent className={cx('content')}>
-                            <Card.Header as="h1" className={cx('number')} content={item.id}></Card.Header>
+                            <Card.Header
+                                as="h1"
+                                className={cx('number')}
+                                content={String(item.id).padStart(2, '0')}
+                            ></Card.Header>
                             <Card.Description className={cx('description')}>
                                 <div dangerouslySetInnerHTML={{ __html: item.title }}></div>
                                 <Divider width="2rem" margin="30px 0" />

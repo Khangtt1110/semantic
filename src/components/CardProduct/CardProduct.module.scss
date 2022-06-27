@@ -1,22 +1,29 @@
 .wrapper {
     width: 100% !important;
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+
     .image {
         padding: 0 60px 40px !important;
     }
 
     .picture {
-        padding: 80px 80px 20px !important;
+        padding: 80px 110px 40px !important;
     }
 
     &:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-
         .card {
             visibility: inherit;
         }
     }
 }
 
+.container {
+    width: 100% !important;
+    height: 100% !important;
+}
 .date {
     font-weight: 900;
     opacity: 0.6;
@@ -27,12 +34,12 @@
     display: flex;
     align-items: center;
     flex: auto;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .card {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     margin: 10px !important;
     visibility: hidden;
@@ -62,6 +69,6 @@
 
 .number {
     font-size: 1.7rem !important;
-    padding: 20px;
+    padding: 30px 20px;
     opacity: 0.7;
 }

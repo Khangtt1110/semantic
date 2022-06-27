@@ -3,11 +3,11 @@ import { Grid, Header } from 'semantic-ui-react';
 import { FeaturedProductData } from '../../data';
 import GenderCheckbox from '../GenderCheckbox';
 
-const FeatureProduct = () => {
+const FeatureProduct = ({ mobile }) => {
     return (
         <Grid container centered style={{ margin: '50px' }}>
             <Grid.Row>
-                <Header as="h1" style={{ letterSpacing: '2px', fontSize: '3rem', fontWeight: 500 }}>
+                <Header as="h1" style={{ letterSpacing: '2px', fontSize: mobile ? '2rem' : '3rem', fontWeight: 500 }}>
                     {FeaturedProductData.name}
                 </Header>
             </Grid.Row>

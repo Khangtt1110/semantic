@@ -2,6 +2,11 @@
     width: 100% !important;
     height: 100%;
 }
+
+.border-left {
+    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
 .content {
     display: flex !important;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Header, Icon } from 'semantic-ui-react';
 
-const ScrollDown = () => {
+const ScrollDown = ({ mobile }) => {
     return (
-        <Container text style={{ textAlign: 'center', paddingBottom: '60px' }}>
+        <Container text style={{ textAlign: 'center', paddingBottom: mobile ? '20px' : '60px' }}>
             <Header as="h6" icon inverted>
                 <Icon name="circle notched" loading />
                 Scroll down

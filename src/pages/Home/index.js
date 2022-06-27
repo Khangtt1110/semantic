@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 import Headers from '../../layout/Header';
@@ -23,15 +23,16 @@ const Home = () => {
         window.addEventListener('resize', handleWindowResize);
         return () => window.removeEventListener('resize', handleWindowResize);
     }, []);
+    const mobile = width < 767;
 
     return (
         <>
-            <Headers />
+            <Headers mobile={mobile} />
             <div className={cx('wrapper')}>
                 <Segment>
                     <Grid centered padded>
                         <Grid.Row>
-                            <FeatureProduct />
+                            <FeatureProduct mobile={mobile} />
                         </Grid.Row>
                         <Grid.Row>
                             <CardProduct data={productsData} />
